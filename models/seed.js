@@ -1,9 +1,9 @@
 var Education = require('./education');
 var Work = require('./work');
 var Project = require('./project');
-
+require('dotenv').config()
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://default:default@ds019101.mlab.com:19101/spotlight');
+mongoose.connect(process.env.MONGODB_URI);
 
 let education = new Education({
   name: 'LASALLE College of the Arts',
