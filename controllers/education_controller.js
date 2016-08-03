@@ -9,4 +9,4 @@ function showEducation (req, res, next) {
   })
 }
 
-module.exports = showEducation
+module.exports = {showEducation: showEducation}
