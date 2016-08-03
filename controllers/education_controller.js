@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const app = express()
 
 function showEducation (req, res, next) {
-  education.find({}, function (err, data) {
+  Education.find({}, function (err, data) {
     res.status(200).json(data)
   })
 }
