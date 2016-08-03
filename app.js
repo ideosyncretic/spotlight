@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+const port = process.env.PORT || 3000
 var routes = require('./routes/routes');
 
 var app = express();
@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log('Listening on port 3000...');
 });
 
