@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var educationController = require('../controllers/education_controller')
-// var education = require('../models/education')
+var Education = require('../models/education')
 
 const bodyParser = require('body-parser')
 router.use(bodyParser.json())
