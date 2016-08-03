@@ -1,15 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var education = require('education_controller')
+var educationController = require('../controllers/education_controller')
+// var education = require('../models/education')
+
+const bodyParser = require('body-parser')
+router.use(bodyParser.json())
+router.use(bodyParser.urlencoded({ extended: true }))
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('../views/index', { title: 'Sprazzeus' });
 });
 
-router.get('/education', (req, res) => {
-  res.json(education);
-});
+router.get('/education', educationController.showEducation);
 
 // /* GET profile page. */
 // router.get('/profile', function (req, res, next) {

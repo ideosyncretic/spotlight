@@ -23,10 +23,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
-
 app.listen(3000, function () {
   console.log('Listening on port 3000...');
 });
+
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, email, auth_token, id')
+  res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT, DELETE')
+  next()
+})
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
