@@ -4,8 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-const port = process.env.PORT || 3000
 var routes = require('./routes/routes');
+const Education = require('./models/education')
+
+const port = process.env.PORT || 3000
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI);
 
 var app = express();
 
