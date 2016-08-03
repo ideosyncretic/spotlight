@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var education = require('education_controller')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('../views/index', { title: 'Sprazzeus' });
+});
+
+router.get('/education', (req, res) => {
+  res.json(education);
 });
 
 // /* GET profile page. */
