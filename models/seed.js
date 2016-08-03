@@ -1,6 +1,6 @@
-var Education = require('./models/education');
-var Work = require('./models/work');
-var Projects = require('./models/project');
+var Education = require('./education');
+var Work = require('./work');
+var Project = require('./project');
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://default:default@ds019101.mlab.com:19101/spotlight');
@@ -8,7 +8,7 @@ mongoose.connect('mongodb://default:default@ds019101.mlab.com:19101/spotlight');
 let education = new Education({
   name: 'LASALLE College of the Arts',
   date: '2010–2014',
-  description: 'Graduated from Design Communication, following completion of screamthe Foundation in Visual Studies programme.'
+  description: 'Graduated from Design Communication, following completion of the Foundation in Visual Studies programme.'
 });
 
 education.save((err) => {
