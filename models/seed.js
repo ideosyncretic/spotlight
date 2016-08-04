@@ -4,16 +4,29 @@ var Project = require('./project');
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI);
 
-let education = new Education({
-  name: 'LASALLE College of the Arts',
-  date: '2010–2014',
-  description: 'Graduated from Design Communication, following completion of the Foundation in Visual Studies programme.'
+// let education = new Education({
+//   name: 'LASALLE College of the Arts',
+//   date: '2010–2014',
+//   description: 'Graduated from Design Communication, following completion of the Foundation in Visual Studies programme.'
+// });
+//
+// education.save((err) => {
+//   if (err) console.log(err);
+//   else {
+//     console.log('Education Created ', education);
+//   }
+// });
+
+let education2 = new Education({
+  name: 'General Assembly — Web Development Immersive Course',
+  date: '2016',
+  description: 'An intensive course that covers programming fundamentals, basic product development, front-end + back-end development, and developing a product in a team. Exposure to relevant technologies (like Javascript, HTML and CSS, Jquery and AJAX, Ruby and Ruby on Rails, Node and Express, React, et al) as well as processes like test-driven development and continuous integration (using tools like Codeship and CodeClimate).'
 });
 
-education.save((err) => {
+education2.save((err) => {
   if (err) console.log(err);
   else {
-    console.log('Education Created ', education);
+    console.log('Education Created ', education2);
   }
 });
 
@@ -43,31 +56,31 @@ education.save((err) => {
 //   }
 // });
 
-let project1 = new Project({
-  name: 'Mastermind',
-  date: '2016',
-  url: '',
-  github: 'link',
-  description: 'A simple browser-based game based on the classic.'
-});
-
-project1.save((err) => {
-  if (err) console.log(err);
-  else {
-    console.log('Project Created ', project1);
-  }
-});
-
-let project2 = new Project({
-  name: 'Jellyfish Wiki',
-  date: '2016',
-  github: 'link',
-  description: 'A micro-wiki made with Ruby on Rails.'
-});
-
-project2.save((err) => {
-  if (err) console.log(err);
-  else {
-    console.log('Project Created ', project2);
-  }
-});
+// let project1 = new Project({
+//   name: 'Mastermind',
+//   date: '2016',
+//   url: '',
+//   github: 'link',
+//   description: 'A simple browser-based game based on the classic.'
+// });
+//
+// project1.save((err) => {
+//   if (err) console.log(err);
+//   else {
+//     console.log('Project Created ', project1);
+//   }
+// });
+//
+// let project2 = new Project({
+//   name: 'Jellyfish Wiki',
+//   date: '2016',
+//   github: 'link',
+//   description: 'A micro-wiki made with Ruby on Rails.'
+// });
+//
+// project2.save((err) => {
+//   if (err) console.log(err);
+//   else {
+//     console.log('Project Created ', project2);
+//   }
+// });
